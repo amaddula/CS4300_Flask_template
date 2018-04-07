@@ -30,7 +30,15 @@ mysql-connector==2.1.4
 nltk==3.2.2
 numpy==1.14.2
 packaging==16.8
+<<<<<<< HEAD
 psycopg2>=2.7.4
+=======
+<<<<<<< HEAD
+psycopg2>=2.7.4
+=======
+psycopg2==2.7.4
+>>>>>>> ab705fe9396d866f2df5d6ff697d8f68e66f38b0
+>>>>>>> 6678021a8a48642d80500e66e3c9314e6747b609
 pycparser==2.14
 PyJWT==1.4.0
 pyparsing==2.2.0
