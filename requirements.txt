@@ -1,6 +1,5 @@
 alembic==0.8.6
 aniso8601==1.1.0
-appdev.py==0.0.1
 appdirs==1.4.3
 autoenv==1.0.0
 bcrypt==2.0.0
@@ -31,7 +30,11 @@ mysql-connector==2.1.4
 nltk==3.2.2
 numpy==1.14.2
 packaging==16.8
+<<<<<<< HEAD
 psycopg2>=2.7.4
+=======
+psycopg2==2.7.4
+>>>>>>> ab705fe9396d866f2df5d6ff697d8f68e66f38b0
 pycparser==2.14
 PyJWT==1.4.0
 pyparsing==2.2.0
