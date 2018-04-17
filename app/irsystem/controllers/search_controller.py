@@ -4,6 +4,7 @@ from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
 import helper
 import json_extraction
 
+<<<<<<< HEAD
 
 project_name = "Flask Filler"
 net_id = ""
@@ -511,6 +512,14 @@ ingredients = ["151 proof rum",
 
 ingredients = [item.lower().encode('utf-8') for item in ingredients]
 #print(ingredients)
+=======
+project_name = "CocktailCalc"
+<<<<<<< HEAD
+net_id = ""
+=======
+net_id = "Diana Bank (dmb469) , Ninad Thanawala (nat36) , Anirudh Maddula (aam252) ,Jordan Stern (js2595)"
+>>>>>>> ab705fe9396d866f2df5d6ff697d8f68e66f38b0
+>>>>>>> 5130ed09b96db048a2ca22a6d582842dcca407d9
 
 @irsystem.route('/', methods=['GET'])
 def search():
