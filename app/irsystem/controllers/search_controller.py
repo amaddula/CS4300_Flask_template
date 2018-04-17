@@ -1,10 +1,9 @@
 from . import *
 from app.irsystem.models.helpers import *
 from app.irsystem.models.helpers import NumpyEncoder as NumpyEncoder
-import helper
-import json_extraction
+import helpers
+#import json_extraction
 
-<<<<<<< HEAD
 
 project_name = "Flask Filler"
 net_id = ""
@@ -512,14 +511,6 @@ ingredients = ["151 proof rum",
 
 ingredients = [item.lower().encode('utf-8') for item in ingredients]
 #print(ingredients)
-=======
-project_name = "CocktailCalc"
-<<<<<<< HEAD
-net_id = ""
-=======
-net_id = "Diana Bank (dmb469) , Ninad Thanawala (nat36) , Anirudh Maddula (aam252) ,Jordan Stern (js2595)"
->>>>>>> ab705fe9396d866f2df5d6ff697d8f68e66f38b0
->>>>>>> 5130ed09b96db048a2ca22a6d582842dcca407d9
 
 @irsystem.route('/', methods=['GET'])
 def search():
@@ -552,12 +543,12 @@ def search():
 		print(user_list)
 		#drink_list = [x.encode('ascii', 'ignore') for x in search_ing]
 
-		ranked_list = helper.drink_jaccard_sim(user_list)
+		ranked_list = helpers.drink_jaccard_sim(user_list)
 		#ranked_list = json_extraction.drink_jaccard_sim(user_list)
 		for i in range(10):
 			print(ranked_list[i])
 
-		data=(helper.get_top_k_drinks(ranked_list, 10))
+		data=(helpers.get_top_k_drinks(ranked_list, 10))
 		#data= json_extraction.get_top_k_drinks(ranked_list, 10)
 		#data = [('Pineberry', 0.3333333333333333), ('CT', 0.3333333333333333), ("Tinyee's Orange Smoothie", 0.25), ('Fruit Cooler', 0.25), ("Laura's Surprise", 0.25), ('Hennyville Slugger', 0.2222222222222222), ('Belfast Bomber', 0.2222222222222222)]
 		#data = [('Ice Pick #2', 0.3333333333333333), ('Christer Petterson', 0.3333333333333333), ('The Vaitkus', 0.3333333333333333), ('Naked Navel', 0.3333333333333333), ('Purple Cow', 0.3333333333333333), ('Zimartini', 0.3333333333333333), ('Frisky Witch', 0.3333333333333333), ('Vodka Russian', 0.3333333333333333), ('Copperhead', 0.3333333333333333), ('Ersh', 0.3333333333333333)]

@@ -9,15 +9,15 @@ import numpy as np
 ingr_list = pickle.load( open("ingr_lst_pickle.p", "rb" ))
 drink_ingr = pickle.load( open( "drink_ingr_pickle.p", "rb" ))
 drink_list = pickle.load( open( "drink_dic_pickle.p", "rb" ))
-mixing_instr = pickle.load( open( "mixing_instructions.p", "rb" ))
+#mixing_instr = pickle.load( open( "mixing_instructions.p", "rb" ))
 
 #clean the unicode off
 ingr_list = [x.lower().encode('utf-8') for x in ingr_list]
 
-new_mix = {}
-for k,v in mixing_instr.items():
-    new_mix[k.encode('utf-8').lower] = v.encode('utf-8')
-mixing_instr = new_mix
+# new_mix = {}
+# for k,v in mixing_instr.items():
+#     new_mix[k.encode('utf-8').lower] = v.encode('utf-8')
+# mixing_instr = new_mix
 #print(mixing_instr)
 
 drink_list_new = {}
@@ -84,8 +84,8 @@ def drink_jaccard_sim(user_ingredients_lst):
     #print(np.sum(final_mat))
     return final_mat
 
-def get_mixing_instructions(drink_name):
-    return mixing_instr[drink_name]
+# def get_mixing_instructions(drink_name):
+#     return mixing_instr[drink_name]
 
 def get_top_k_drinks(lst, k):
     #lst should have a list of ranked values, just need to do an argsort for the best ones
